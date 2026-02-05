@@ -7,12 +7,12 @@ import { Button } from './components/TipButton';
 
 function App() {
   return (
-    <>
-      <header className='bg-amber-400 flex items-center justify-center p-8'>
+    <div className='w-screen  md:flex md:flex-col md:items-center md:justify-center md:h-screen'>
+      <header className='flex items-center justify-center p-8'>
         <img src={LogoImg} alt='SPLITTER Logo' />
       </header>
-      <main className='bg-secondary-background rounded-2xl p-8 space-y-8'>
-        <section className='space-y-8'>
+      <main className='bg-secondary-background rounded-2xl p-8 space-y-8 md:flex md:gap-8 md:max-w-250'>
+        <section className='space-y-8 md:flex-1'>
           <div className='space-y-1'>
             <h2 className='text-primary-heading-text'>Bill</h2>
             <Input
@@ -41,9 +41,8 @@ function App() {
             <Input placeholder='0' iconSrc={PersonImg} iconAlt={'Person'} />
           </div>
         </section>
-        <section className='bg-tertiary-background rounded-2xl p-4'>
+        <section className='bg-tertiary-background rounded-2xl p-4 md:flex-1 md:flex md:flex-col md:justify-between md:p-8'>
           <div className='my-8 space-y-4'>
-            
             <div className='flex justify-between'>
               <div>
                 <h2 className='text-primary-text'>Tip Amount</h2>
@@ -64,7 +63,7 @@ function App() {
           </button>
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
