@@ -31,10 +31,17 @@
   --color-tertiary-background: hsl(183, 100%, 15%);
   --color-quaternary-background: hsl(189, 47%, 97%);
 
-  --color-heading-text: hsl(186, 14%, 43%);
+  --color-primary-heading-text: hsl(186, 14%, 43%);
   --color-input-text: hsl(183, 100%, 15%);
 
   --color-accent: hsl(172, 67%, 45%);
+
+  --color-button-hover: oklch(91% 0.096 180.426);
+
+  --color-validate: oklch(55.5% 0.163 48.998);
+
+  --color-primary-text: hsl(185, 41%, 84%);
+  --color-secondary-text: hsl(184, 14%, 56%);
 }
 
 @layer base {
@@ -43,24 +50,36 @@
   }
 
   h2 {
-    @apply text-heading-text text-lg;
+    @apply text-lg;
   }
   input {
     @apply bg-quaternary-background w-full text-2xl text-input-text;
   }
-  button{
-    @apply bg-tertiary-background text-white cursor-pointer rounded-md text-2xl p-2;
+  button {
+    @apply cursor-pointer rounded-md text-2xl p-2;
+  }
+}
+
+@layer components {
+  .tip-button {
+    @apply bg-tertiary-background text-white;
     &:hover {
-      @apply bg-accent;
+      @apply bg-button-hover text-input-text;
+    }
+  }
+  .reset-button {
+    @apply bg-accent text-tertiary-background w-full;
+    &:hover {
+      @apply bg-button-hover;
     }
   }
 }
 
 .remove-arrow::-webkit-inner-spin-button,
 .remove-arrow::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 .remove-arrow {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
