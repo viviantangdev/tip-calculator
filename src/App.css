@@ -48,6 +48,12 @@
   input {
     @apply bg-quaternary-background w-full text-2xl text-input-text;
   }
+  button{
+    @apply bg-tertiary-background text-white cursor-pointer rounded-md text-2xl p-2;
+    &:hover {
+      @apply bg-accent;
+    }
+  }
 }
 
 .remove-arrow::-webkit-inner-spin-button,
